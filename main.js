@@ -20,13 +20,13 @@ async function readJson(path) {
     
 
 //erstellt fläche
-      const svg = d3
-      .select('#d3')
-      .append('svg')
-    .attr("width", 2000)
-    .attr("height", 2000);
+      const svg = d3 // eine variable wird mit der d3 libari verlinkt
+      .select('#d3') // wählt id von html file aus
+      .append('svg') // erstellt ein svg
+    .attr("width", 2000) // das svg erhält das attribut weite 2000
+    .attr("height", 2000); // das svg erhält das attribut höhe 200
 
-      const shape = svg.selectAll('circle').data(simplifiedData).enter();
+      const shape = svg.selectAll('circle').data(simplifiedData).enter(); // die funktion data() und enter() fügen die daten hinzu
       const texte = svg.selectAll('text').data(simplifiedData).enter();
 
  
